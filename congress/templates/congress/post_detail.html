@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                              <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" type = "text/css"/>
+				<link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<div class=" container" >
+
+			<div  style="float:left;margin-left:20px; background-color:strong blue; width:70px; height:1px;margin-top:10px;">
+				     		              	<img src="/static/img/nubslogo.jpg"/>
+									</div>
+
+ <h2 class ="brand" style = "margin-top: 50px;margin-left:200px;">CONGRESS 2013 REGISTRATION FORM</h2>
+      <small class ="brand" style = "margin-top: 50px;margin-left:270px;">NATIONAL UNION OF BAPTIST STUDENTS</small>
+<style>
+  		.hr { height:5; width:938px;  border-top:6px solid blue; margin-left:-50px;}
+  		.hr hr { display:none; }
+	</style>
+              
+		<div style="margin-top:10px; margin-left:-20px;" class=hr><hr/></div>
+ {% block content %} 
+<div class=" container" style = "margin-top:30px;margin-right:10px;"> 
+       <div class="container-fluid">
+          <div class="row-fluid" style = "margin-right:10px;margin-left:-40px;">
+            <!--<div class="span6">-->
+		<table class="table table-bordered table-striped" style = "width:938px;">
+                      <thead>
+                        <tr>
+                              
+                               <th> <a  style  = " position:relative;margin-left:10px;">GUEST DETAILS </a>:&nbsp {{posts.ID }}</th>
+                                   
+                                         <th><a  style  = " position:relative;margin-left:10px;">HOST DETAILS </a>:&nbsp {{posts.host.ID}} </th>
+						
+                                             </tr>
+                                                    </thead>
+
+
+<tbody>
+      	<tr>
+       			 <th>{{posts.Full_name}}</th>
+        			
+             <th>{{posts.host}}</th>
+			
+      </tr>
+      <tr>
+        <th>{{posts.phone_number}}&nbsp<span class="muted">-->Phone number</span></th>
+        <th>{{posts.guest_hall}}&nbsp<span class="muted">-->Hall of residence</span></th>
+      </tr>
+      <tr>
+        <th>{{posts.sex}}&nbsp<span class="muted">-->Gender</span></th>
+        <th>{{posts.host_room_number}}&nbsp<span class="muted">-->room number</span></th>
+      </tr>
+      <tr>
+        <th>{{posts.institution}}&nbsp<span class="muted">-->Institution--</span></th>
+        <th>{{posts.host.Email}}&nbsp<span class="muted">-->email of Host</span></th>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+		</div>
+<div style="margin-top:0px;margin-bottom:20px;text-align:right; margin-left:-40px;" class=hr><hr/></div>
+<a class ="brand" style = "margin-left:200px;">CONGRESS 2013!!! I'M MASSIVELY INVOLVED</a>
+ 	
+ 	<ul class="breadcrumb" style = "width:910px;margin-left:-40px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+ 	 <li class="active"><strong>Contacts</strong> <span class="divider">|</span></li>
+     <li>
+    <a><strong>0240327086 (Cecilia)</strong></a> <span class="divider">|</span>
+   </li>
+   <li>
+    <a><strong>0273216346 (Bezalel)</strong></a> <span class="divider">|</span>
+   </li>
+   <li>
+    <a><strong>0248302860 (Stephen)</strong></a>
+   </li>
+</ul>
+ 	
+ 	</div>
+   </div>
+
+
+    <p style = "margin-left:250px;">CONGRESS PROGRAM OUTLINE AND VENUES</p>   
+<div class=" container" style = "margin-top:30px;margin-right:10px;"> 
+       <div class="container-fluid">
+          <div class="row-fluid" style = "margin-right:10px;margin-left:-40px;">
+	<table class="table table-bordered table-striped" style = "width:938px;">
+                      <thead>
+                        <tr>
+                              
+                               <th> <a  style  = " position:relative;margin-left:10px;"> DAYS </a></th>
+                                   
+                                         <th><a  style  = " position:relative;margin-left:10px;">PROGRAMS </a> </th>
+							<th><a  style  = " position:relative;margin-left:10px;">VENUES </a> </th>	
+                                             </tr>
+                                                    </thead>
+<tbody>
+      	<tr>
+       			 <th>THURSDAY| 28th</th>
+        			
+             <th>ARRIVAL OF SCHOOLS</th>
+			 <th>COMMONWEALTH CHAPEL</th>
+			
+      </tr>
+      <tr>
+        <th>FRIDAY | 29th<span class="muted"></span></th>
+        <th>WORSHIP SERVICE<span class="muted"></span></th>
+	<th>COMMONWEALTH CHAPEL<span class="muted"></span></th>
+      </tr>
+      <tr>
+        <th>SATURDAY | 30th<span class="muted"></span></th>
+        <th>MEDICAL OUTREACH AND EVANGELISM<span class="muted"> (& Love concert in the evening)</span></th>
+	<th>OKPONGOLO<span class="muted"> (Atheletic oval->Converging point)</span></th>
+      </tr>
+      <tr>
+        <th>SUNDAY | 31th<span class="muted"></span></th>
+        <th>HANDING-OVER<span class="muted">(& Alumni banquet in the evening)</span></th>
+	<th>NNB2<span class="muted"> (& same venue for the banquet)</span></th>
+      </tr>
+    </tbody>
+  </table>
+
+  </div></div></div>
+
+
+
+  </div>
+{%endblock%}
+			
+	
+</html>

@@ -1,0 +1,38 @@
+{% block content %}
+<h3>SEARCH RESULTS ({{guest.count}}) Found</h3><hr/>
+
+ 
+<div id="demo" class="collapse in"> … </div>
+
+<div class=" container"    style = "margin-left:-160px"> 
+
+{% for s in guest %}
+
+<blockquote>
+
+	<a href="/reg/congress/{{ s.guest_ID}}/True"><h3 style="text-align:justify;" >{{ s }}</h3></a><br/></li>
+	<p style="font-size:14px; text-align:justify;">{{s.guest_institution}}<a href="/reg/congress/{{s.guest_ID}}/True" color='blue'>...view full details...</a></p>
+<!--	<a href="/reg/congress/{{ s.id }}/True"><i class="icon-comment"></i>&nbsp<em>{{s.comments.count}} Comment(s)</em></a>-->
+	<hr/>
+</blockquote>
+{% endfor %}
+</ul>
+</div></div>
+<!--<script type="text/javascript">var_actions_icnt="3";</script>-->
+<!--div class="pagination">-->
+ <!--
+    <li><a href="#">Prev</a></li>
+    <li class="active">
+      <a href="#">1</a>
+    </li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">Next</a></li>
+-->
+
+        
+        
+    
+
+{% endblock %}

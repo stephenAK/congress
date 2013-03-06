@@ -1,0 +1,42 @@
+
+{% extends "congress/base.html"%}
+{% block content %}
+
+ <div class=" container"    style = "margin-left:-120px;"> 
+<!--<ul class="breadcrumb" style  = " position:relative;">-->
+<table class ="table "> 
+
+  <div>
+     <tr>
+  <th><a  style  = " position:relative;margin-left:10px;">ID </a></th>
+  <th><a style  = " position:relative;margin-left:10px;">FULL NAME</a></th>
+  <th><a  style  = " position:relative;margin-left:10px;">PHONE NUMBER</a></th>
+  <th><a  style  = " position:relative;margin-left:-3px;">INSTITUTION</a></th>
+  <th><a  style  = " position:relative;margin-left:10px;">GENDER</a></th>
+  <th><a  style  = " position:relative;margin-left:70px;">HOST</a></th>
+  <th><a  style  = " position:relative;margin-left:30px;">HALL</a></th>
+  <th><a   style  = " position:relative;margin-left:10px;">ROOM NUMBER</a></th>
+
+	</tr>
+		<tbody>
+			</div>
+  {% for guest in guest_list %}
+<tr>
+  <td>{{guest.guest_ID }}</td>
+  <td>{{guest.Full_name}}</td>
+  <td>{{guest.phone_number}}</td>
+  <td>{{guest.institution}}</td>
+  <td>{{guest.sex}}</td>
+  <td>{{guest.host}}</td>
+  <td>{{guest.guest_hall}}</td>
+  <td>{{guest.host_room_number}}</td>
+</tr>
+</p>
+
+{% endfor %}
+</tbody>
+</table>
+</ul> </div>
+{%endblock%}
+
+</body></html>

@@ -1,0 +1,46 @@
+
+{% extends "congress/base.html"%}
+{% block content %}
+
+
+<div class=" container"    style = "margin-left:-120px;"> 
+	<ul>  				     					 
+						<form class="navbar-search pull-right; " style = "margin-left:50px; margin-top:-50px; " method="GET" action="/reg/congress/searchost/">
+						   <i class="icon-search"> </i>
+					           <input type="text" style="border: 1px solid blue; " class="form-search" placeholder="Custom Search host"name="search_item" >
+    					        </form>
+					               </ul>	
+<!--<ul class="breadcrumb" style  = " position:relative;">-->
+<table class ="table "> 
+
+  <div>
+<tr>
+  <th><a>HOST ID</a></th>
+  <th><a>FULL NAME</a></th>
+  <th><a>PHONE NUMBER</a></th>
+  <th><a>HALL</a></th>
+  <th><a>ROOM NUMBER</a></th>
+  <th><a>HOSTING STATUS</a></th>
+  <th><a>NO OF GUEST</a></th>
+
+</tr>
+<tbody>
+			</div>
+ {%  for host in  host_list %}<p>
+<tr>
+  <td>{{ host.host_ID }}</td>
+  <td>{{host.Full_name}}</td>
+  <td>{{host.phone_number}}</td>
+  <td>{{host.hall}}</td>
+  <td>{{host.r00m_number}}</td>
+  <td>{{host.is_hosting_}}</td>
+  <td>{{host.guests}}</td>
+</tr>
+</p>
+{% endfor %}
+</tbody>
+</table>
+</ul> </div>
+{%endblock%}
+
+</body></html>

@@ -1,0 +1,37 @@
+{% extends "congress/base.html"%}
+{% block content %}
+
+ <div class=" container"    style = "margin-left:-120px;"> 
+
+<table class ="table ">
+ <div>
+<tr>
+  <th><a>ALUMNI ID</a></th>
+  <th><a>FULL NAME</a></th>
+  <th><a>PHONE NUMBER</a></th>
+  <th><a>INSTITUTION</a></th>
+  <th><a>GENDER</a></th>
+  <th><a>EMAIL</a></th>
+  <th><a>BANQUET</a></th>
+
+</tr>
+<tbody>
+			</div>
+ {% for alumni in  alumni_list %}
+<tr>
+  <td>{{alumni.ID }}</td>
+  <td>{{alumni.Full_name}}</td>
+  <td>{{alumni.phone_number}}</td>
+  <td>{{alumni.institution}}</td>
+  <td>{{alumni.sex}}</td>
+  <td>{{alumni.email}}</td>
+  <td>{{alumni.Banquet}}</td>
+</tr>
+</p>
+{% endfor %}
+</tbody>
+</table>
+</ul> </div>
+{%endblock%}
+
+</body></html>
