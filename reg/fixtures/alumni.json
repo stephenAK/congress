@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "reg.Alumni", 
+        "fields": {
+            "surname": "philip", 
+            "other_name": "Mensah", 
+            "sex": "Female", 
+            "institution": 1,
+            "phone_number":"0234567687",
+            "email":""
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "reg.Alumni", 
+        "fields": {
+            "surname": "Yaw", 
+            "other_name": "Boakye", 
+            "sex": "Male", 
+            "institution": 1,
+            "phone_number":"0234576892",
+            "email":"SK@yahoo.com"
+        }
+    }
+]

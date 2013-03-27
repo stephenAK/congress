@@ -82,7 +82,7 @@ def host_detail(request, id, hostsDetails=False):
 def post_search(request, term):
 	if request.GET.get('search_item','') != '':
 		term = request.GET.get('search_item','')
-	guest = Guest_detail.objects.filter(surname__icontains=term) | Guest_detail.objects.filter(other_name__icontains=term)
+	guest = Guest_detail.objects.filter(surname__icontains=term) | Guest_detail.objects.filter(other_name__icontains=term)| Guest_detail.objects.filter(guest_ID__icontains=term)
 	return render_to_response('congress/post_search.html',{'guest':guest,'term':term,'user': request.user})
 
 def host_search(request, term):

@@ -1,13 +1,28 @@
 
 {% extends "congress/base.html"%}
-{% block content %}
 
+{%block title%}
+<title>Host Page</title>
+{%endblock title%}
+{% block content %}
+<div class="modal hide fade" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>HOST LIST</h3>
+  </div>
+  <div class="modal-body">
+    <p>DONE LOADING....CLOSE TO VIEW LIST</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
+</div>
 
 <div class=" container"    style = "margin-left:-120px;"> 
 	<ul>  				     					 
-						<form class="navbar-search pull-right; " style = "margin-left:50px; margin-top:-50px; " method="GET" action="/reg/congress/searchost/">
+						<form class="navbar-search pull-right; " style = "margin-left:100px; margin-top:-50px; " method="GET" action="/reg/congress/searchost/">
 						   <i class="icon-search"> </i>
-					           <input type="text" style="border: 1px solid blue; " class="form-search" placeholder="Custom Search host"name="search_item" >
+					           <input type="text" style="border: 1px solid black; " class="form-search" placeholder="Custom Search host"name="search_item" >
     					        </form>
 					               </ul>	
 <!--<ul class="breadcrumb" style  = " position:relative;">-->
@@ -28,7 +43,7 @@
 			</div>
  {%  for host in  host_list %}<p>
 <tr>
-  <td>{{ host.host_ID }}</td>
+  <td>{{host.host_ID }}</td>
   <td>{{host.Full_name}}</td>
   <td>{{host.phone_number}}</td>
   <td>{{host.hall}}</td>

@@ -1,0 +1,182 @@
+[
+    {
+        "pk": 7,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Twum", 
+            "other_name": "Philip", 
+            "sex": "Male", 
+            "institution": 1,
+            "phone_number":"0234567687",
+            "Email":"",
+            "hall":"PENTAGON",
+            "room_number":"blk b e303"
+           
+        }
+    }, 
+     {
+        "pk": 8,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Deladem", 
+            "other_name": "Jennifer", 
+            "sex": "Female", 
+            "institution": 1,
+            "phone_number":"0234567684",
+            "Email":"jenniferdelademwoaym@gmail.com",
+            "hall":"PENTAGON",
+            "room_number":"blk c d205"
+            
+        }
+    },
+    {
+        "pk": 9,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Yeboah", 
+            "other_name": "Mensah", 
+            "sex": "Male", 
+            "institution": 1,
+            "phone_number":"0234567607",
+            "Email":"",
+            "hall":"SEY",
+            "room_number":"3303"
+           
+        }
+    }, 
+     {
+        "pk": 10,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Dela", 
+            "other_name": "Jenn", 
+            "sex": "Female", 
+            "institution": 1,
+            "phone_number":"0234567664",
+            "Email":"se@y.com",
+            "hall":"LEGON",
+            "room_number":"d25"
+            
+        }
+    },
+    {
+        "pk": 11,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "mensah", 
+            "other_name": "martin", 
+            "sex": "Male", 
+            "institution": 1,
+            "phone_number":"0234564387",
+            "Email":"",
+            "hall":"JUBILEE",
+            "room_number":"f33"
+           
+        }
+    }, 
+     {
+        "pk": 12,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Ddem", 
+            "other_name": "Jefer", 
+            "sex": "Female", 
+            "institution": 1,
+            "phone_number":"02345567684",
+            "Email":"jewoaym@gmail.com",
+            "hall":"SEY",
+            "room_number":"blk c d205"
+            
+        }
+    },
+    {
+        "pk": 13,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "AMA", 
+            "other_name": "BOAKYE", 
+            "sex": "Male", 
+            "institution": 1,
+            "phone_number":"02334467687",
+            "Email":"",
+            "hall":"VOLTA",
+            "room_number":"blk b e303"
+           
+        }
+    }, 
+     {
+        "pk": 14,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Delam", 
+            "other_name": "Jfer", 
+            "sex": "Female", 
+            "institution": 1,
+            "phone_number":"0234545684",
+            "Email":"jrdelademwoaym@gmail.com",
+            "hall":"AKUAFO",
+            "room_number":"blk c d205"
+            
+        }
+    },
+    {
+        "pk": 15,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Twum", 
+            "other_name": "Philip", 
+            "sex": "Male", 
+            "institution": 1,
+            "phone_number":"02345455687",
+            "Email":"",
+            "hall":"AKUAFO",
+            "room_number":"blk b e303"
+           
+        }
+    }, 
+     {
+        "pk": 16,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Deladem", 
+            "other_name": "Jennifer", 
+            "sex": "Female", 
+            "institution": 1,
+            "phone_number":"0234567754",
+            "Email":"jenniferdelademwoaym@gmail.com",
+            "hall":"AKUAFO",
+            "room_number":"blk c d205"
+            
+        }
+    },
+    {
+        "pk": 17,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "Twm", 
+            "other_name": "Phip", 
+            "sex": "Male", 
+            "institution": 1,
+            "phone_number":"02323267687",
+            "Email":"",
+            "hall":"COMMONWEALTH",
+            "room_number":"blk b e303"
+           
+        }
+    }, 
+     {
+        "pk": 18,
+        "model": "reg.Host_detail", 
+        "fields": {
+            "surname": "ladem", 
+            "other_name": "Jennif", 
+            "sex": "Female", 
+            "institution": 1,
+            "phone_number":"0221267684",
+            "Email":"",
+            "hall":"PENTAGON",
+            "room_number":"blk c d205"
+            
+        }
+    }
+]
