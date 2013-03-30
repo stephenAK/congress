@@ -5,14 +5,14 @@
 
                               <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" type = "text/css"/>
 				<link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-<div class=" container" >
+<div class=" container" style = "margin-left:-100px;">
 
 					<div  style="float:left;margin-left:20px; background-color:strong black; width:70px; height:1px;margin-top:10px;">
 				     		              	<img src="/static/img/nubslogo.jpg"/>
 					 </div>
 
  						<h2 class ="brand" style = "margin-top: 50px;margin-left:200px;">CONGRESS 2013 REGISTRATION FORM</h2>
-    							  <small class ="brand" style = "margin-top: 50px;margin-left:270px;">NATIONAL UNION OF BAPTIST STUDENTS</small>
+    							  <h3 class ="brand" style = "margin-top: 0px;margin-left:230px;">NATIONAL UNION OF BAPTIST STUDENTS</h3>
 	<style>
   		.hr { height:5; width:938px;  border-top:6px solid black; margin-left:-50px;}
   		.hr hr { display:none; }
@@ -20,19 +20,19 @@
               
 
  {% block content %} 
-				<div class=" container" style = "margin-top:30px;margin-right:10px;"> 
+				<div class=" container" style = "margin-top:3px;margin-right:10px;"> 
        					<div class="container-fluid">
        						<div style="margin-top:10px; margin-left:-40px;" class=hr><hr/></div>
 						
           					<div class="row-fluid" style = "margin-right:10px;margin-left:-40px;">
             					<!--<div class="span6">-->
-							<table class="table table-bordered table-striped" style = "width:938px;">
+							<table class="table" style = "width:1000px;">
                      					 <thead>
                        						 <tr>
                               
-                               				 <th> <a  style  = " position:relative;margin-left:10px;">GUEST DETAILS </a>:&nbsp {{posts.ID }}</th>
+                               				 <th> <a  style  = " position:relative;margin-left:10px;"><h3>GUEST DETAILS:&nbsp {{posts.ID }}</h3> </a></th>
                                    
-                                         		 <th><a  style  = " position:relative;margin-left:10px;">HOST DETAILS </a>:&nbsp {{posts.host.ID}} </th>
+                                         		 <th><a  style  = " position:relative;margin-left:10px;"><h3>HOST DETAILS :&nbsp {{posts.host.ID}}</h3></a> </th>
 						
                                              			</tr>
                                                          </thead>
@@ -40,22 +40,22 @@
 
 								<tbody>
       									<tr>
-       			 							<th>{{posts.Full_name}}</th>
+       			 							<th><h3>{{posts.Full_name}}</h3></th>
         			
-             										<th>{{posts.host}}</th>
+             										<th><h3>{{posts.host}}</h3></th>
 			
       									</tr>
       									<tr>
-        									<th>{{posts.phone_number}}&nbsp<span class="muted">-->Phone number</span></th>
-        									<th>{{posts.guest_hall}}&nbsp<span class="muted">-->Hall of residence</span></th>
+        									<th><h3>{{posts.phone_number}}&nbsp<span class="muted">-->Phone number</span></h3></th>
+        									<th><h3>{{posts.guest_hall}}&nbsp<span class="muted">-->Hall of residence</span></h3></th>
       									</tr>
       									<tr>
-        									<th>{{posts.sex}}&nbsp<span class="muted">-->Gender</span></th>
-        									<th>{{posts.host_room_number}}&nbsp<span class="muted">-->room number</span></th>
+        									<th><h3>{{posts.sex}}&nbsp<span class="muted">-->Gender</span></h3></th>
+        									<th><h3>{{posts.host_rm}}&nbsp<span class="muted">-->room number</span></h3></th>
       									</tr>
       									<tr>
-        									<th>{{posts.institution}}&nbsp<span class="muted">-->Institution--</span></th>
-        									<th>{{posts.host.Email}}&nbsp<span class="muted">-->email of Host</span></th>
+        									<th><h3>{{posts.institution}}&nbsp<span class="muted">-->Institution--</span></h3></th>
+        									<th><h3>{{posts.host.Email}}&nbsp<span class="muted">-->email of Host</span></h3></th>
       									</tr>
     								</tbody>
   							</table>
@@ -110,34 +110,49 @@
   </div></div></div>
 
 -->
-<a class ="brand" style = "margin-left:200px;">CONGRESS 2013!!! I'M MASSIVELY INVOLVED</a>
+<div  class="row-fluid" style = "margin-right:0px;">
+  	<table class="table " style = "width:1000px; margin-left: -40px;">
+  			<tbody>   <tr>
+                              
+                               	    <th> <h3 style = "margin-left:250px;"> SEMINAR: &nbsp {{posts.seminar}}</h3></th>
+                               	</tr> 
+                                			   
+                         </tbody>
+
+  	
+  	</table>
+
+</div>
+
+
+
+
+
+
+<div>
+<h3 class ="brand" style = "margin-left:0px;">Contacts: 0240327086 (Cecilia) | 0273216346 (Bezalel) | 0242107400 (Emma) | 0248302860 (Stephen) </h3>
+<a class ="brand" "><h3 style = "margin-left:200px;">CONGRESS 2013!!! I'M MASSIVELY INVOLVED</h3></a>
+</div> 
  	
-						 	<ul class="breadcrumb" style = "width:910px;margin-left:-40px;">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
- 	 						<li class=""><strong>Contacts</strong> <span class="divider">|</span></li>
-     							<li>
-    								<h>0240327086 (Cecilia)</h> <span class="divider">|</span>
-   							</li>
-  							<li>
-    								<h>0273216346 (Bezalel)</h> <span class="divider">|</span>
-   							 </li>
-   							 <li>
-   								 <h>0248302860 (Stephen)</h>
-   							 </li>
-							 </ul>
 
 <div style="margin-top:0px;margin-bottom:20px;text-align:right; margin-left:-40px;" class=hr><hr/></div>
+ &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp
+ 
+ 
+ 
+ 
+ <div style="margin-top:0px;margin-bottom:20px;text-align:right; margin-left:-40px;" class=hr><hr/></div>
 
-
-					<div><a class ="brand" style = "margin-left:200px;">BAG TAG FOR </a>:&nbsp {{posts.Full_name }} &nbsp &nbsp</div>
-						<h2 style ="margin-left:300px;"> {{posts.ID }}</h2>
+					<div><h1 class ="brand" style = "margin-left:250px;"><strong>&nbsp BAG TAG &nbsp &nbsp  {{posts.ID }}</strong></h1></div>
+						<h2 style ="margin-left:300px;"></h2>
  					      <div class="row-fluid" style = "margin-right:0px;"> 
-							<table class="table table-bordered table-striped" style = "width:938px; margin-left: -40px;">
+							<table class="table " style = "width:938px; margin-left: -40px;">
                       						<thead>
                       							  <tr>
                               
-                               							<th> <a  style  = " position:relative;margin-left:10px;">GUEST DETAILS </a>:&nbsp {{posts.ID }}</th>
+                               							<th> <h3  style  = " position:relative;margin-left:10px;">GUEST</h3></th>
                                    
-                                     					        <th><a  style  = " position:relative;margin-left:10px;">HOST DETAILS </a>:&nbsp {{posts.host.ID}} </th>
+                                     					        <th><h3  style  = " position:relative;margin-left:10px;">HOSTED BY:</h3> </th>
 						
                                           				   </tr>
                                                    		 </thead>
@@ -145,22 +160,22 @@
 
 								  <tbody>
       									   <tr>
-       										 <th>{{posts.Full_name}}</th>
+       										 <th><h3>{{posts.Full_name}}</h3></th>
         			
-             									  <th>{{posts.host}}</th>
+             									  <th><h3>{{posts.host}}</h3></th>
 			
       									    </tr>
      									    <tr>
-        									   <th>{{posts.phone_number}}&nbsp<span class="muted">-->Phone number</span></th>
-        									   <th>{{posts.guest_hall}}&nbsp<span class="muted">-->Hall of residence</span></th>
+        									   <th><h3>{{posts.phone_number}}&nbsp<span class="muted">-->Phone number</span></h3></th>
+        									   <th><h3>{{posts.guest_hall}}&nbsp<span class="muted">-->Hall of residence</span></h3></th>
      									    </tr>
       										<tr>
-        									   <th>{{posts.sex}}&nbsp<span class="muted">-->Gender</span></th>
-        									   <th>{{posts.host_room_number}}&nbsp<span class="muted">-->room number</span></th>
+        									   <th><h3>{{posts.sex}}&nbsp<span class="muted">-->Gender</span></h3></th>
+        									   <th><h3>{{posts.host_rm}}&nbsp<span class="muted">-->room number</span></h3></th>
       									    </tr>
       									    <tr>
-        									    <th>{{posts.institution}}&nbsp<span class="muted">-->Institution--</span></th>
-       										    <th>{{posts.host.Email}}&nbsp<span class="muted">-->email of Host</span></th>
+        									    <th><h3>{{posts.institution}}&nbsp<span class="muted">-->Institution--</span></h3></th>
+       										    <th><h3>{{posts.host.Email}}&nbsp<span class="muted">-->email of Host</span></h3></th>
       									    </tr>
    								  </tbody>
   							 </table>
@@ -169,7 +184,7 @@
 
   
   
- 	
+ 	<div style="margin-top:0px;margin-bottom:20px;text-align:right; margin-left:-40px;" class=hr><hr/></div>
 		</div>
 
      </div>

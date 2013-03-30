@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib import admin
-from django.core.exceptions  import ValidationError
+from django.core.exceptions   import ValidationError
 from django.core import exceptions, validators
 from django.core.validators import EMPTY_VALUES
 from django.forms import ValidationError
@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from reg.thumbs import ImageWithThumbsField
 from reg.thumbs import generate_thumb
 from django.contrib.admin.widgets import AdminFileWidget
-from django.forms import ModelForm
+
 '''
 class AdminImageFieldWithThumbWidget(AdminFileWidget):
      
@@ -45,12 +45,12 @@ class Institution(models.Model):
 class Host_detail(models.Model):
  
      host_ID = models.AutoField(primary_key=True,editable = False,blank = True)
-     surname = models.CharField(max_length = 30,blank =True, null=True)
+     surname = models.CharField(max_length = 30, blank = True,null = True)
      other_name = models.CharField("Other name(s) ",blank = True,null = True,max_length = 30,help_text ="May enter initials/ Last name")
      sex = models.CharField('Gender', choices =(("Male","Male"),("Female","Female")),max_length = 7)
      phone_number = models.CharField(max_length = 15,blank = True, null = True,unique = True)
      Email = models.EmailField('Email-address',blank = True,null = True)
-     hall = models.CharField('Halls', choices=(("COMMONWEALTH","COMMONWEALTH"),("VOLTA","VOLTA"),("LEGON","LEGON"),("AKUAFO","AKUAFO"),("SARBAH","SARBAH"),   ("JUBILEE","JUBILEE"),("JEAN-NELSON","JEAN-NELSON"),("ALEX-KWAPONG","ALEX-KWAPONG"),("TF","TF"),("BANI","BANI"),("EVANDY","EVANDY"),("SEY","SEY"),("PENTAGON","PENTAGON"),("LIMANN","LIMANN"),("OTHER","OTHER")),max_length = 20)
+     hall = models.CharField('Halls', choices=(("COMMONWEALTH","COMMONWEALTH"),("VOLTA","VOLTA"),("LEGON","LEGON"),("AKUAFO","AKUAFO"),("SARBAH","SARBAH"),   ("JUBILEE","JUBILEE"),("JEAN-NELSON","JEAN-NELSON"),("ALEX-KWAPONG","ALEX-KWAPONG"),("SEY","SEY"),("PENTAGON","PENTAGON"),("LIMANN","LIMANN"),("OTHER","OTHER")),max_length = 20)
      room_number = models.CharField(max_length = 90,blank = True, null = True)
      is_hosting = models.BooleanField(('hosting status'),default = False,
         help_text=('Designates whether the person is hosting someone'))
@@ -62,9 +62,6 @@ class Host_detail(models.Model):
      date_updated     = models.DateTimeField (auto_now=True,blank =True, null = True)
      institution = models.ForeignKey(Institution,null = True, blank = True)
      can_host = models.PositiveIntegerField(max_length =50, null = True, blank = True, default = '1',help_text=('Designates the number of persons he/she can host'))
-     denomination =  models.CharField(choices =(("NUBS","NUBS"),("NON-NUBS","NON-NUBS")),max_length = 9,blank = True, null = True, default = "NUBS")
-
-
 
      def host_vital(self):
          return '%s | %s | %s' % (self.phone_number,self.hall,self.is_hosting) 
@@ -72,7 +69,7 @@ class Host_detail(models.Model):
      def ID(self):
            if self.host_ID <10:
                return "#00%s" %(self.host_ID)
-           elif self.host_ID> 9:
+           elif self.host_ID > 9 and self.host_ID <100:
                return "#0%s" %(self.host_ID)
            else:
                return "#%s" %(self.host_ID)
@@ -118,6 +115,9 @@ class Host_detail(models.Model):
  
      def Full_name (self):
           return '%s %s' % (self.surname.upper(), self.other_name.upper())
+          
+     def inst(self):
+     		return self.institution
 '''    
      def admin_image(self):
          if self.photo:
@@ -153,38 +153,23 @@ class Guest_detail(models.Model):
      other_name = models.CharField("Other name(s) ",max_length = 30,help_text ="Please Enter initials/ Last name")
      sex = models.CharField('Gender', choices =(("Male","Male"),("Female","Female")),max_length = 7)
      institution = models.ForeignKey(Institution,null = True, blank = True)
-     Nationality = models.CharField('Country', choices =(("Ghana","Ghana"),("Nigeria","Nigeria"),("Benin","Benin"),("Togo","Togo"),("Botswana","Botswana"),("Other","Other")),max_length = 10)
+     Nationality = models.CharField('Country', choices =(("Ghana","Ghana"),("Nigeria","Nigeria"),("Other","Other")),max_length = 10)
      phone_number = models.CharField(max_length = 15,null = True, blank = True,unique = True)
-     Email = models.EmailField('Email-address',blank = True, null = True,help_text ="Can be left blank if NO email-address is provided")
+     Email = models.EmailField('Email-address',blank = True, null = True)
      date_registered  = models.DateTimeField (auto_now_add=True, blank =True, null = True)
      date_updated     = models.DateTimeField (auto_now=True,blank =True, null = True)
-     host   = models.ForeignKey(Host_detail, null = True, blank = True,help_text ="Please select a Host for this guest")
+     host   = models.ForeignKey(Host_detail, null = True, blank = True)
      gender_match = models.CharField(max_length = 30, blank = True,null = True)
-     seminar  =  models. CharField('Seminar',choices =(("The Christian and the corporate World","The Christian and the corporate World"),("Missions in the 21st Century","Missions in the 21st Century"),("The Complete Leader","The Complete Leader"),("Understanding God's will in choosing a life partner","Understanding God's will in choosing a life partner"),("The Christian in a SEX-MAD world","The Christian in a SEX-MAD world")), max_length = 60,blank = True,null = True)  
        
-     def host_check (self):
-          if self.host.guest_detail_set.count() == self.host.can_host:
-             return False
-          elif self.host.guest_detail_set.count() < self.host.can_host:
-             return True
-          #else:
-            # try raise ValidationError ({'self.host': ["This Host is over booked",]})
-     host_check.boolean = True  
-  
-    # def save(self, *args, **kwargs):
-   #      if self.host.guest_detail_set.count() > self.host.can_host:
-  #           raise ValidationError({'self.host': "error message"})
- #        else:
-#             super(Model, self).save(*args, **kwargs)
        
-     def gen_match(self):
+     def gender_match_(self):
           if not self.sex in self.host.sex:
            # gender_match = "WRONG PAIRING"
             return False
           else:
              #gender_match = "PAIRED"
              return True
-     gen_match.boolean = True 
+     gender_match_.boolean = True 
 
      def __unicode__(self):
            return '%s %s' % (self.surname.upper(), self.other_name.upper())
@@ -213,7 +198,7 @@ class Guest_detail(models.Model):
      def host_gender(self):
           return "%s" %(self.host.sex)
           
-     def host_rm(self):
+     def host_room_number(self):
          return "%s" %(self.host.room_number.upper())
          
          
@@ -224,16 +209,7 @@ class Guest_detail(models.Model):
                return "#0%s" %(self.guest_ID)
          else:
                return "#%s" %(self.guest_ID)
-class test(ModelForm):
-      
-      class Meta:
-           model = Guest_detail
-
-      def save(self, *args, **kwargs):
-         if self.host.guest_detail_set.count() > self.host.can_host:
-             raise forms.ValidationError({'self.host': "error message"})
-         else:
-             super(Model, self).save(*args, **kwargs)             
+               
      
              
 class Alumni(models.Model):
@@ -273,23 +249,23 @@ class GuestInline(admin.TabularInline):
 
      
 class Host_Admin(admin.ModelAdmin):
-      list_display = ('host_ID','Full_name','sex','phone_number','hall','institution','r00m_number','guests','can_host','check','denomination')
-      search_fields = ('host_ID','surname','other_name','phone_number')
-      list_filter = ('sex','is_hosting','hall','denomination','date_registered','date_updated')
+      list_display = ('host_ID','Full_name','sex','phone_number','inst','hall','r00m_number','guests','can_host','check')
+      search_fields = ('host_ID','surname','other_name')
+      list_filter = ('sex','is_hosting','hall','date_registered','date_updated')
       ordering = ('-date_registered',)
       date_hierarchy = 'date_registered'
-      list_per_page = 50
+      list_per_page = 20
       inlines = [GuestInline]
       readonly_fields = ("is_hosting",)
 
 class Guest_Admin(admin.ModelAdmin):
-      list_display = ('guest_ID','Full_name','phone_number','institution','sex','host_check','host','host_gender','guest_hall','host_rm','gen_match')
-      search_fields = ('guest_ID','surname','other_name','phone_number')
+      list_display = ('guest_ID','Full_name','phone_number','institution','sex','host','host_gender','guest_hall','host_room_number','gender_match_')
+      search_fields = ('guest_ID','surname','other_name')
       list_filter = ('institution','sex','date_registered','date_updated','gender_match')
       ordering = ('-date_registered',)
       date_hierarchy = 'date_registered'
       raw_id_fields = ('host',)
-      list_per_page = 50
+      list_per_page = 30
       readonly_fields = ("gender_match",)
 
 class Alumni_Admin(admin.ModelAdmin):
